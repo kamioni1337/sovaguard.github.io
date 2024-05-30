@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sending Email</title>
+</head>
+<body>
+<form method="post">
+<input type="button" value="Send Mail" onclick="sendEmail()">
+</form>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+    function sendEmail() {
+    Email.send({
+    SecureToken : "fde34f34-b1f6-4bf0-97fd-56a822b6fdd7",
+    To : 'nigabal@mail.ru',
+    From : "nigabal@mail.ru",
+    Subject: "Testing Email using javascript",
+    Body: "If you are reading this, dont forget to applaud"
+    }).then(function(message){
+        message => alert(message)
+        });
+    }
+</script>
+</body>
+</html>
